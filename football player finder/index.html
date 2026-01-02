@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Football Player Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <div class="ball"></div>
+          <div>
+            <h1>Football Player Finder</h1>
+            <p>Search any player and get their profile</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="search">
+          <label class="label" for="playerInput">Player name</label>
+          <div class="row">
+            <input id="playerInput" type="text" placeholder="e.g. Messi, Ronaldo, Neymar" autocomplete="off" />
+            <button class="btn" id="searchBtn">Search</button>
+          </div>
+          <p class="hint">Tip: Use full name for better results (e.g. “Kevin De Bruyne”).</p>
+
+          <div class="status">
+            <div class="loading" id="loading" hidden>
+              
+              <span>Anyway Lionel Messi is the Goat</span>
+            </div>
+            <div class="error" id="error" hidden></div>
+          </div>
+        </div>
+
+        <div class="card" aria-live="polite">
+          <div class="card-top">
+            <div class="shine"></div>
+            <div class="chip" id="playerTeamChip">Team</div>
+          </div>
+
+          <div class="content">
+            <div class="avatar-wrap">
+              <img id="playerImg" alt="Player photo" />
+              <div class="fallback" id="fallback">
+                <div class="silhouette"></div>
+                <p>No image yet</p>
+              </div>
+            </div>
+
+            <div class="info">
+              <h2 id="playerName">Search a player</h2>
+              <p class="sub" id="playerMeta">Nationality • Position</p>
+
+              <div class="grid">
+                <div class="item">
+                  <span class="k">Team</span>
+                  <span class="v" id="playerTeam">—</span>
+                </div>
+                <div class="item">
+                  <span class="k">Nationality</span>
+                  <span class="v" id="playerNation">—</span>
+                </div>
+                <div class="item">
+                  <span class="k">Position</span>
+                  <span class="v" id="playerPos">—</span>
+                </div>
+                <div class="item">
+                  <span class="k">Born</span>
+                  <span class="v" id="playerBorn">—</span>
+                </div>
+              </div>
+
+              <p class="bio" id="playerBio"></p>
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <span class="mini">
+              Data: TheSportsDB
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
